@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kağıthane #10689 blog — FRC dünyası ve takım haberlerimiz. Güncel bilgiler ve gelişmeler.">
+    <title>Blog | 10689</title>
+    <link rel="icon" type="image/png" href="img/1.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="page-bg page-enter" id="page-content">
+        <div class="animated-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+        <!-- Navbar injected by navbar.js -->
+
+        <section class="section" style="padding-top: 140px;">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h1 class="section-title" data-tr="Blog" data-en="Blog">Blog</h1>
+                    <p class="section-desc"
+                        data-tr="FRC dünyasından ve takımımızdan güncel haberler, makaleler ve gelişmeler."
+                        data-en="Latest news, articles, and updates from the FRC world and our team.">FRC dünyasından ve
+                        takımımızdan güncel haberler, makaleler ve gelişmeler.</p>
+                </div>
+
+                <div class="blog-grid">
+                    <!-- Blog Post 1 -->
+                    <div class="glass-card blog-card reveal reveal-delay-1" onclick="openBlogModal(0)">
+                        <div class="blog-card-img">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=300&fit=crop&q=80"
+                                alt="FRC Sezonu">
+                        </div>
+                        <div class="blog-card-content">
+                            <p class="blog-card-date" data-tr="10 Ocak 2026" data-en="January 10, 2026">10 Ocak 2026
+                            </p>
+                            <h3 class="blog-card-title" data-tr="2026 Sezonu Başlıyor!"
+                                data-en="2026 Season Kicks Off!">2026 Sezonu Başlıyor!</h3>
+                            <p class="blog-card-excerpt"
+                                data-tr="Bu yılki FRC oyun kuralları açıklandı. Takım olarak heyecanla hazırlıklara başladık."
+                                data-en="This year's FRC game rules have been revealed. As a team, we've excitedly started preparations.">
+                                Bu yılki FRC oyun kuralları açıklandı. Takım olarak heyecanla hazırlıklara başladık.</p>
+                            <span class="blog-read-more" data-tr="Devamını Oku →" data-en="Read More →">Devamını
+                                Oku →</span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <!-- Blog Post 6
+                    <div class="glass-card blog-card reveal reveal-delay-6" onclick="openBlogModal(5)">
+                        <div class="blog-card-img">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=300&fit=crop&q=80"
+                                alt="Yeni Üyeler">
+                        </div>
+                        <div class="blog-card-content">
+                            <p class="blog-card-date" data-tr="25 Aralık 2025" data-en="December 25, 2025">25 Aralık
+                                2025</p>
+                            <h3 class="blog-card-title" data-tr="Yeni Üye Alımlarımız"
+                                data-en="New Member Recruitments">Yeni Üye Alımlarımız</h3>
+                            <p class="blog-card-excerpt"
+                                data-tr="Takımımıza yeni yetenekler katıldı! Oryantasyon sürecimizi tamamladık."
+                                data-en="New talents have joined our team! We completed our orientation process.">
+                                Takımımıza yeni yetenekler katıldı! Oryantasyon sürecimizi tamamladık.</p>
+                            <span class="blog-read-more" data-tr="Devamını Oku →" data-en="Read More →">Devamını
+                                Oku →</span>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-text">© 2026 <a href="index.html">Kağıthane #10689</a> — <span
+                    data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">Tüm hakları saklıdır.</span></p>
+        </footer>
+    </div>
+
+    <!-- Blog Modal Overlay -->
+    <div class="blog-modal-overlay" id="blogModal">
+        <div class="blog-modal-card">
+            <button class="blog-modal-close" id="blogModalClose" aria-label="Kapat">✕</button>
+            <div class="blog-modal-img" id="blogModalImg"></div>
+            <div class="blog-modal-body">
+                <p class="blog-modal-date" id="blogModalDate"></p>
+                <h2 class="blog-modal-title" id="blogModalTitle"></h2>
+                <div class="blog-modal-text" id="blogModalText"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/navbar.js"></script>
+    <script>
+        // Blog post full content data
+        var blogPosts = [
+            {
+                img: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&h=400&fit=crop&q=80',
+                dateTr: '10 Ocak 2026', dateEn: 'January 10, 2026',
+                titleTr: '2026 Sezonu Başlıyor!', titleEn: '2026 Season Kicks Off!',
+                textTr: 'Bu yılki FRC oyun kuralları açıklandı ve takım olarak heyecanla hazırlıklara başladık! İlk tasarım toplantımızı gerçekleştirdik ve strateji belirleme sürecindeyiz.',
+                textEn: 'This year\'s FRC game rules have been revealed and we\'ve excitedly started preparations as a team! We held our first design meeting and are in the process of determining our strategy.'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=400&fit=crop&q=80',
+                dateTr: '8 Şubat 2026', dateEn: 'February 8, 2026',
+                titleTr: 'Sponsor Buluşmamız', titleEn: 'Sponsor Meeting',
+                textTr: 'Değerli sponsorlarımızla bir araya gelerek yeni sezon hedeflerimizi paylaştık. İş birliği fırsatlarını değerlendirdik ve takımımızın vizyonunu sunduk.\n\nSponsorlarımızın desteği, her sezon daha ileriye gitmemizi sağlayan en önemli faktörlerden biri. Bu toplantıda hem geçmiş sezon başarılarımızı hem de gelecek planlarımızı detaylı bir şekilde aktardık.\n\nYeni sponsorluk anlaşmaları da gündemdeydi. Takımımız, mühendislik projelerinin yanı sıra sosyal sorumluluk projeleriyle de destekçilerinin güvenini kazanmaya devam ediyor.',
+                textEn: 'We gathered with our valued sponsors to share our new season goals. We evaluated collaboration opportunities and presented our team\'s vision.\n\nThe support of our sponsors is one of the most important factors that allows us to go further each season. In this meeting, we shared both our past season achievements and our future plans in detail.\n\nNew sponsorship agreements were also on the agenda. Our team continues to earn the trust of its supporters with social responsibility projects in addition to engineering projects.'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=400&fit=crop&q=80',
+                dateTr: '1 Şubat 2026', dateEn: 'February 1, 2026',
+                titleTr: 'Build Season Günlüğü: Hafta 1', titleEn: 'Build Season Diary: Week 1',
+                textTr: 'İlk hafta boyunca prototipleme çalışmalarımızı tamamladık. Mekanik tasarım ekibimiz şasi üzerinde çalışırken, yazılım ekibi otonom yazılımlarını geliştirmeye başladı.\n\nBu hafta toplam 40 saatin üzerinde atölyede zaman geçirdik. CAD tasarımlarımız tamamlandı ve ilk parçaların üretimine geçtik. 3D yazıcılarımız ve CNC makinelerimiz tam kapasite çalışıyor.\n\nElektrik ekibi de devre şemalarını oluşturdu ve sensör testlerine başladı. Her departman uyum içinde ilerliyor.',
+                textEn: 'Throughout the first week, we completed our prototyping efforts. While our mechanical design team worked on the chassis, the software team began developing autonomous software.\n\nThis week we spent over 40 hours in the workshop. Our CAD designs were completed and we moved on to producing the first parts. Our 3D printers and CNC machines are working at full capacity.\n\nThe electrical team also created circuit diagrams and started sensor testing. Every department is progressing in harmony.'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&h=400&fit=crop&q=80',
+                dateTr: '20 Ocak 2026', dateEn: 'January 20, 2026',
+                titleTr: 'Topluma Katkı Projemiz', titleEn: 'Our Outreach Project',
+                textTr: 'STEM eğitimini yaygınlaştırmak amacıyla bölgemizdeki okullarda robotik atölyeleri düzenledik. Öğrencilerle birlikte mini robotlar yaparak mühendisliğin keyfini paylaştık.\n\nToplamda 5 farklı okulu ziyaret ettik ve 200\'den fazla öğrenciye ulaştık. Çocukların gözlerindeki heyecan ve merak, bizim en büyük motivasyon kaynağımız oldu.\n\nBu projemiz FIRST\'ın "Gracious Professionalism" değerlerinin bir yansıması. Bilgiyi paylaşarak toplumda mühendislik kültürünü yaygınlaştırmayı hedefliyoruz.',
+                textEn: 'To promote STEM education, we organized robotics workshops in schools in our district. We shared the joy of engineering by building mini robots with students.\n\nWe visited a total of 5 different schools and reached more than 200 students. The excitement and curiosity in the children\'s eyes became our greatest source of motivation.\n\nThis project is a reflection of FIRST\'s "Gracious Professionalism" values. We aim to spread engineering culture in society by sharing knowledge.'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop&q=80',
+                dateTr: '10 Ocak 2026', dateEn: 'January 10, 2026',
+                titleTr: 'FRC 2026 Oyun Tahminleri', titleEn: 'FRC 2026 Game Predictions',
+                textTr: 'Yeni sezon öncesinde ekip olarak olası oyun senaryolarını analiz ettik. Geçmiş yılların trendlerinden yola çıkarak hazırlıklarımızı şekillendirdik.\n\nFIRST\'ın son yıllardaki oyun tasarım eğilimlerini incelediğimizde, hem otonom hem de teleoperated dönemlerin giderek daha karmaşık hale geldiğini görüyoruz.\n\nStrateji ekibimiz kapsamlı bir rapor hazırladı. Bu rapor, olası oyun mekaniklerine karşı hazırlıklı olmamızı sağlayacak modüler tasarım yaklaşımlarını içeriyor.',
+                textEn: 'Before the new season, as a team we analyzed possible game scenarios. We shaped our preparations based on trends from previous years.\n\nWhen we examine FIRST\'s game design trends in recent years, we see that both autonomous and teleoperated periods are becoming increasingly complex.\n\nOur strategy team prepared a comprehensive report. This report includes modular design approaches that will ensure we are prepared for possible game mechanics.'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=400&fit=crop&q=80',
+                dateTr: '25 Aralık 2025', dateEn: 'December 25, 2025',
+                titleTr: 'Yeni Üye Alımlarımız', titleEn: 'New Member Recruitments',
+                textTr: 'Takımımıza yeni yetenekler katıldı! Oryantasyon sürecimizi tamamladık ve yeni üyelerimiz aktif olarak çalışmalara dahil oldu.\n\nBu yıl 8 yeni üye aramıza katıldı. Her biri farklı yeteneklere sahip olan yeni arkadaşlarımız, mekanik, yazılım, elektrik, iş ve pazarlama departmanlarına dağıldı.\n\nOryantasyon programımız kapsamında temel eğitimler, atölye güvenliği ve takım kültürü hakkında bilgilendirme yapıldı. Yeni üyelerimiz hızla takıma uyum sağladı ve projelerimize katkı sağlamaya başladı.',
+                textEn: 'New talents have joined our team! We completed our orientation process and our new members have actively joined the work.\n\nThis year, 8 new members joined us. Our new friends, each with different talents, were distributed to the mechanical, software, electrical, business, and marketing departments.\n\nAs part of our orientation program, training on basic skills, workshop safety, and team culture was provided. Our new members quickly adapted to the team and started contributing to our projects.'
+            }
+        ];
+
+        function openBlogModal(index) {
+            var post = blogPosts[index];
+            var lang = localStorage.getItem('lang') || 'tr';
+            var modal = document.getElementById('blogModal');
+            var pageContent = document.getElementById('page-content');
+
+            document.getElementById('blogModalImg').innerHTML = '<img src="' + post.img + '" alt="">';
+            document.getElementById('blogModalDate').textContent = lang === 'en' ? post.dateEn : post.dateTr;
+            document.getElementById('blogModalTitle').textContent = lang === 'en' ? post.titleEn : post.titleTr;
+
+            var text = lang === 'en' ? post.textEn : post.textTr;
+            document.getElementById('blogModalText').innerHTML = text.split('\n\n').map(function (p) {
+                return '<p>' + p + '</p>';
+            }).join('');
+
+            modal.classList.add('active');
+            pageContent.classList.add('blur-behind');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBlogModal() {
+            var modal = document.getElementById('blogModal');
+            var pageContent = document.getElementById('page-content');
+            modal.classList.remove('active');
+            pageContent.classList.remove('blur-behind');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('blogModalClose').addEventListener('click', closeBlogModal);
+        document.getElementById('blogModal').addEventListener('click', function (e) {
+            if (e.target === this) closeBlogModal();
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeBlogModal();
+        });
+    </script>
+</body>
+
+</html>
