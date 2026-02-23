@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Kağıthane #10689</title>
+    <link rel="icon" type="image/png" href="img/1.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+    <div class="page-bg page-enter">
+        <div class="animated-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+
+        <div class="particles-404" id="particles"></div>
+
+        <div class="page-404">
+            <div class="error-robot">
+                <div class="robot-antenna"></div>
+                <div class="robot-head">
+                    <div class="robot-eye robot-eye-left"></div>
+                    <div class="robot-eye robot-eye-right"></div>
+                </div>
+                <div class="robot-body"></div>
+            </div>
+
+            <div class="error-code">404</div>
+            <h1 class="error-title" data-tr="Sayfa Bulunamadı" data-en="Page Not Found">Sayfa Bulunamadı</h1>
+            <p class="error-desc"
+                data-tr="Aradığınız sayfa mevcut değil veya taşınmış olabilir. Robotumuz bile bulamadı!"
+                data-en="The page you're looking for doesn't exist or may have been moved. Even our robot couldn't find it!">
+                Aradığınız sayfa mevcut değil veya taşınmış olabilir. Robotumuz bile bulamadı!</p>
+
+            <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+                <a href="index.html" class="btn-primary" data-tr="Ana Sayfaya Dön" data-en="Back to Home">Ana Sayfaya
+                    Dön</a>
+                <a href="contact.html" class="btn-ghost" data-tr="İletişim" data-en="Contact">İletişim</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Generate floating particles
+        (function () {
+            var container = document.getElementById('particles');
+            for (var i = 0; i < 30; i++) {
+                var p = document.createElement('div');
+                p.className = 'particle';
+                p.style.left = Math.random() * 100 + '%';
+                p.style.width = (Math.random() * 3 + 1) + 'px';
+                p.style.height = p.style.width;
+                p.style.animationDuration = (Math.random() * 8 + 6) + 's';
+                p.style.animationDelay = (Math.random() * 10) + 's';
+                p.style.opacity = Math.random() * 0.3 + 0.1;
+                container.appendChild(p);
+            }
+        })();
+    </script>
+    <script src="js/navbar.js"></script>
+</body>
+
+</html>
